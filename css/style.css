@@ -1,6 +1,7 @@
 :root {
     --white_color: #ffffff;
     --theme: #C7002E;
+    --black: #000000;
 }
 
 .wrap {
@@ -86,7 +87,7 @@
 .swiper-pagination {}
 
 
-.swiper-tab {
+.main_slide_wrap .swiper-tab {
     position: absolute;
     display: flex;
     gap: 4px;
@@ -100,7 +101,7 @@
     z-index: 999;
 }
 
-.swiper-pagination-fraction {
+.main_slide_wrap .swiper-pagination-fraction {
     position: static;
     right: 10%;
     left: auto;
@@ -111,7 +112,7 @@
     align-self: center;
 }
 
-.swiper-button-next {
+.main_slide_wrap .swiper-button-next {
     position: static;
     color: #fff;
 
@@ -120,11 +121,11 @@
 
 }
 
-.swiper-button-next:after {
+.main_slide_wrap .swiper-button-next:after {
     font-size: 20px;
 }
 
-.swiper-button-prev {
+.main_slide_wrap .swiper-button-prev {
     position: static;
     color: #fff;
 
@@ -136,7 +137,7 @@
     align-items: flex-end;
 }
 
-.swiper-button-prev:after {
+.main_slide_wrap .swiper-button-prev:after {
     font-size: 20px;
 
 }
@@ -181,6 +182,12 @@
 .grid_tab_wrap .itm {
     border: 1px solid #f1f1f1;
     border-radius: 25px;
+
+    transition: 0.5s;
+}
+
+.grid_tab_wrap .itm:hover {
+    background: #f1f1f1;
 }
 
 
@@ -197,8 +204,10 @@
     opacity: 0.7;
 }
 
+/* 여기부터  */
 
 .grid_tab_wrap .itm figure {
+    border-bottom: 1px solid #f1f1f1;
     border-radius: 25px;
     overflow: hidden;
 }
@@ -208,13 +217,17 @@
     padding: 12px;
 
     word-break: keep-all;
+    transition: 0.5s;
 }
+
 
 
 .grid_tab_wrap .itm strong {
     color: #000;
     margin: 0 0 16px 0;
     line-height: 24px;
+
+    height: 48px;
 }
 
 .grid_tab_wrap .itm em {
@@ -271,4 +284,191 @@
     background: var(--theme);
     color: #fff;
     border: none;
+}
+
+.banner_wrap {}
+
+.banner_wrap .banner {
+    position: relative;
+}
+
+.banner_slide figure {
+    max-height: 250px;
+}
+
+
+
+
+.banner_slide .txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+}
+
+.banner_slide .txt strong {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--white_color);
+    margin: 0 0 16px 0;
+}
+
+.banner_slide .txt p {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white_color);
+}
+
+.banner_slide .swiper-tab>* {
+    color: #fff;
+}
+
+
+.banner_slide .swiper-tab .swiper-button-prev {
+    left: 10%;
+}
+
+.banner_slide .swiper-tab .swiper-button-next {
+    right: 10%;
+}
+
+
+/* 카테고리 */
+
+.category {}
+
+.category .tit {
+    margin: 0 0 40px 0;
+}
+
+.category .swiper {
+    margin: 0 0 54px 0;
+}
+
+
+.category .itm {
+    border: 1px solid #f1f1f1;
+    border-radius: 25px;
+    transition: 0.5s;
+    overflow: hidden;
+
+    margin: 0 0 40px 0;
+}
+
+
+.category .itm:hover {
+    background: #f1f1f1;
+}
+
+
+
+
+
+.category .itm figure {
+    border-bottom: 1px solid #f1f1f1;
+
+    border-radius: 25px;
+}
+
+.category .itm .itm_txt {
+    display: block;
+    padding: 16px;
+
+    word-break: keep-all;
+}
+
+
+
+.category .itm strong {
+    color: #000;
+    margin: 0 0 16px 0;
+    height: 48px;
+    line-height: 24px;
+}
+
+.category .itm em {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.category .itm .money p {
+    text-decoration: line-through;
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+.category .itm .percent {
+    color: var(--theme);
+}
+
+
+.category .itm .star p {
+    font-size: 14px;
+    color: #999;
+}
+
+.category .itm .star span {
+    color: #d0ff00;
+    border: none;
+    outline: none;
+    font-size: 20px;
+
+    transform: translate(0, 2px);
+}
+
+.category .more {
+    display: block;
+    margin: 0 auto 14px auto;
+    text-align: center;
+}
+
+.category .more a {
+    padding: 12px 80px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    background: #fdfdfd;
+    font-size: 20px;
+
+}
+
+.category .ramen .small_tit {
+    height: 200px;
+    background: url(../images/h2_bg01.jpg)no-repeat center center/cover;
+    border-radius: 25px;
+    margin: 0 0 40px 0;
+}
+
+.category .ramen h3 {
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+.category .snack .small_tit {
+    height: 200px;
+    background: url(../images/h2_bg03.jpg)no-repeat center center/cover;
+    border-radius: 25px;
+    margin: 0 0 40px 0;
+}
+
+.category .snack h3 {
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+
+
+.category .material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
 }

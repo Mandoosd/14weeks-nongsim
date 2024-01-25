@@ -43,5 +43,41 @@ $(function () {
         $('.grid_tab .tit .right .tab_tit li a').eq(idx).addClass('on');
     });
 
+    var swiper = new Swiper(".banner_slide", {
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper = new Swiper(".ramen_wrap", {
+        centeredSlides: true,
+        spaceBetween: 30,
+
+        slidesPerView: 4,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
 
 });

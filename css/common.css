@@ -8,6 +8,10 @@
     padding: 100px 0;
 }
 
+.default_bottom {
+    padding: 0 0 100px 0;
+}
+
 .default .title {
     max-width: 1200px;
     margin: 0 auto 32px auto;
@@ -46,7 +50,7 @@ h2 {
     font-weight: 800;
     text-align: left;
 
-    margin: 0 0 40px 0;
+    margin: 0 0 16px 0;
 
     color: #000;
 }
